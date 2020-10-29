@@ -10,16 +10,17 @@ public class Metodos {
 	public void navegdor(String url, String navegador) {
 		if (navegador == "CHROME" || navegador == "FIREFOX") {
 			if (navegador == "CHROME") {
-				System.setProperty("webdriver.chrome.driver", navegador);
+				System.setProperty("webdriver.chrome.driver", "c://Drivers//chromedriver.exe");
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 			} else if (navegador == "CHROME") {
-				System.setProperty("webdriver.gecko.driver", navegador);
+				System.setProperty("webdriver.gecko.driver", "c://Drivers//geckodriver.exe");
 				driver = new FirefoxDriver();
 				driver.manage().window().maximize();
 			}
 		} else {
 			System.out.println("Digite CHROME ou FIREFOX");
+			System.out.println("ola");
 		}
 	}
 
